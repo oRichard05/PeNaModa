@@ -45,5 +45,15 @@ const sapatos = {
             preco:preco,
             img:img
         })
+    },
+    alterar(nome,desc,categoria,preco,img){
+        for ( let i=0; i < sapatos.listaSapatos.length; i++ ){
+            if (sapatos.listaSapatos[i].nome == nome){
+                sapatos.listaSapatos[i].desc = desc;
+                sapatos.listaSapatos[i].categoria = categoria;
+                sapatos.listaSapatos[i].preco = preco
+                sapatos.listaSapatos[i].img = img
+            }
+        }
     }
 }
