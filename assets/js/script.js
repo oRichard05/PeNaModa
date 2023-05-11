@@ -95,6 +95,7 @@ init = () => {
             <img src="`+val.img+`"/>
             <p>`+val.nome+`</p>
             <p> R$`+val.preco+`</p>
+            <button class="excluir" onclick="deletar(this)" >excluir</button>
         </div>    
         `
     })
