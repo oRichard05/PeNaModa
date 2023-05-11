@@ -1,3 +1,10 @@
+:root {
+    --cor-preta: black;
+    --cor-branca: white;
+    --cor-execluir: #E31B1B;
+    --cor-ouro: #CDB181;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -9,17 +16,18 @@ header{
     align-items: center;
     padding-right: 15px;
     height: fit-content;
-    background-color: #000;
+    background-color: var(--cor-preta);
 }
 header picture img{
-    height: 20vh;
+    height: 90px;
+    margin-left: 30px;
 }
-.produtos{
+.product{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
 }
-.divprincipal img{
-    width: 200px;
-    height: 200px;
+.product img{
+    width: 20px;
 }
+

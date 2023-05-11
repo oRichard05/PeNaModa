@@ -35,7 +35,7 @@ const sapatos = {
                 sapatos.listaSapatos.splice(i,1);
             }
         }
-
+        init()
     },
     adicionar(nome,desc,categoria,preco,img){
         sapatos.listaSapatos.push({
@@ -45,6 +45,7 @@ const sapatos = {
             preco:preco,
             img:img
         })
+        init()
     },
     alterar(sapato,nome,desc,categoria,preco,img){
         for ( let i=0; i < sapatos.listaSapatos.length; i++ ){
@@ -56,6 +57,7 @@ const sapatos = {
                 sapatos.listaSapatos[i].img = img
             }
         }
+        init()
     }
 }
 
@@ -88,6 +90,7 @@ alterar.addEventListener("submit", function(event){
 
 init = () => {
     var container = document.getElementById('product')
+    container.innerHTML = ""
     sapatos.listaSapatos.map((val) => {
         console.log(val.nome)
         container.innerHTML += `
@@ -106,4 +109,5 @@ init()
 function deletar(item){
     sapato = item.previousElementSibling.previousElementSibling.innerHTML
     sapatos.remover(sapato)
+    init()
 }
