@@ -37,7 +37,7 @@ const sapatos = {
         }
 
     },
-    adcionar(nome,desc,categoria,preco,img){
+    adicionar(nome,desc,categoria,preco,img){
         sapatos.listaSapatos.push({
             nome:nome,
             desc:desc,
@@ -58,3 +58,30 @@ const sapatos = {
         }
     }
 }
+
+criar = document.getElementById('criar')
+criar.addEventListener("submit", function(event){
+    event.preventDefault();
+    let form = new FormData(this)
+    let nome = form.get('nome')
+    let desc = form.get('desc')
+    let categoria = form.get('categoria')
+    let preco = form.get('preco')
+    let imagem = form.get('imagem')
+    sapatos.adicionar(nome,desc,categoria,preco,imagem)
+    console.log(sapatos.listaSapatos)
+})
+
+alterar = document.getElementById('alterar')
+alterar.addEventListener("submit", function(event){
+    event.preventDefault();
+    let form = new FormData(this)
+    let nome = form.get('nome')
+    let novo = form.get('new')
+    let desc = form.get('desc')
+    let categoria = form.get('categoria')
+    let preco = form.get('preco')
+    let imagem = form.get('imagem')
+    sapatos.alterar(nome,novo,desc,categoria,preco,imagem)
+    console.log(sapatos.listaSapatos)
+})
