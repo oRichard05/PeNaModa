@@ -102,3 +102,8 @@ init = () => {
 }
 
 init()
+
+function deletar(item){
+    sapato = item.previousElementSibling.previousElementSibling.innerHTML
+    sapatos.remover(sapato)
+}
