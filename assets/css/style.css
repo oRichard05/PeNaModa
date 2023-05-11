@@ -5,11 +5,13 @@
     --cor-ouro: #CDB181;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
+    font-family: 'Gotu', sans-serif;
 }
-header{
+
+header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -18,16 +20,41 @@ header{
     height: fit-content;
     background-color: var(--cor-preta);
 }
-header picture img{
+
+header picture img {
     height: 90px;
     margin-left: 30px;
 }
-.product{
+
+#product {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
-}
-.product img{
-    width: 20px;
+    place-items: center;
+    text-align: center;
 }
 
+#product img {
+    width: 200px;
+    height: 200px;
+}
+
+.product img {
+    width: 20vh;
+}
+
+.excluir {
+    display: none;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: rgb(167, 27, 27);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+.product:hover{
+    .excluir{
+        display:inline;
+    }
+}
