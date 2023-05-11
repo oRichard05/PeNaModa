@@ -5,28 +5,28 @@ const sapatos = {
             desc:"Salto Alto Bico Fino - Preto",
             categoria:"Sapato de salto",
             preco: 75.99,
-            img:"Scarpin-Vizzano.png",
+            img:"assets/img/Scarpin-Vizzano.png",
         },
         {
             nome:"Flare",
             desc:"Bota Cano Curto Salto",
             categoria:"Bota",
             preco: 319.90,
-            img:"bota1.jpg",
+            img:"assets/img/bota1-removebg-preview.png",
         },
         {
             nome:"Mule Basic",
             desc:"Salto Diferenciado",
             categoria:"Sandália",
             preco:149.90,
-            img:"sandalia1.jpg",
+            img:"assets/img/sandalia1-removebg-preview.png",
         },
         {
             nome:"Nike Waffle Debut",
             desc:"elegantes inspirados no Nike Daybreak",
             categoria:"Tênis esportivo",
             preco: 489.90,
-            img:"tenis1.png",
+            img:"assets/img/tenis1.jpg  ",
         },
     ],
     remover(sapato){
@@ -85,3 +85,19 @@ alterar.addEventListener("submit", function(event){
     sapatos.alterar(nome,novo,desc,categoria,preco,imagem)
     console.log(sapatos.listaSapatos)
 })
+
+init = () => {
+    var container = document.getElementById('product')
+    sapatos.listaSapatos.map((val) => {
+        console.log(val.nome)
+        container.innerHTML += `
+        <div class="mostrarP"> 
+            <img src="`+val.img+`"/>
+            <p>`+val.nome+`</p>
+            <p> R$`+val.preco+`</p>
+        </div>    
+        `
+    })
+}
+
+init()
