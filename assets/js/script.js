@@ -92,10 +92,9 @@ init = () => {
     var container = document.getElementById('product')
     container.innerHTML = ""
     sapatos.listaSapatos.map((val) => {
-        console.log(val.nome)
         container.innerHTML += `
-        <div class="mostrarP"> 
-            <img src="`+val.img+`"/>
+        <div class="mostrarP product"> 
+            <img onclick="maisInfo(this)" src="`+val.img+`"/>
             <p>`+val.nome+`</p>
             <p> R$`+val.preco+`</p>
             <button class="excluir" onclick="deletar(this)" >excluir</button>
@@ -109,5 +108,8 @@ init()
 function deletar(item){
     sapato = item.previousElementSibling.previousElementSibling.innerHTML
     sapatos.remover(sapato)
-    init()
+}
+
+function maisInfo(item){
+    console.log("teste")
 }
