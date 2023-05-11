@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 15px;
+    height: fit-content;
+    background-color: #000;
+}
+header picture img{
+    height: 20vh;
+}
+.produtos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+.divprincipal img{
+    width: 200px;
+    height: 200px;
+}
