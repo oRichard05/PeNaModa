@@ -320,4 +320,20 @@ header picture img {
         height: 20px;
         width: 20px;
         opacity: 1;
-        }       
+        } 
+.c {
+    box-shadow: 0px 4px 4px black;
+    border: 1px solid black;
+    color: var(--cor-preta);
+    background-color: var(--cor-branca);
+}              
+
+.c:before {
+    border-top: 1.2px solid black;
+    border-left: 1.2px solid black;
+}
+
+.c:after {
+    border-bottom: 1.2px solid black;
+    border-right: 1.2px solid black;
+}
