@@ -13,7 +13,7 @@
     transition: 0.5s;
     font-family: 'Quicksand', sans-serif;
 }
-
+/* ! Remover se não for utilizar BG */
 body {
     background-image: url();
     background-repeat: no-repeat;
@@ -129,7 +129,6 @@ header picture img {
     gap: 20px;
     justify-content: center;
 }
-
 
 .produtos{
     display: block;
