@@ -53,19 +53,19 @@ header picture img {
 }
 
 .excluir {
-    display: none;
     border: none;
     outline: none;
     border-radius: 10px;
-    background-color: rgb(167, 27, 27);
+    background-color: #E31B1B;
     color: white;
-    padding: 5px;
+    padding: 3px;
     width: 70%;
     cursor: pointer;
     margin-bottom: 10px;
 }
-.product:hover{
-    .excluir{
-        display:inline;
-    }
+.excluir:hover{
+    scale: 1.05;
+}
+.modal{
+    position: fixed !important;
 }
