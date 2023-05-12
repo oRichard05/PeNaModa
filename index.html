@@ -31,12 +31,14 @@
     <section class="produtos">
         <div class="cria">
             <form action="" id="criar">
-                <input type="text" name="nome" placeholder="Nome">
-                <input type="text" name="desc" placeholder="descrição">
-                <input type="text" name="categoria" placeholder="categoria">
-                <input type="text" name="preco" placeholder="preço">
-                <input type="text" name="imagem" placeholder="imagem">
-                <button class="enviar" type="submit">Enviar</button>
+                <div id="form-div">
+                    <input type="text" name="nome" placeholder="Nome">
+                    <input type="text" name="desc" placeholder="descrição">
+                    <input type="text" name="categoria" placeholder="categoria">
+                    <input type="text" name="preco" placeholder="preço">
+                    <input type="text" name="imagem" placeholder="imagem">
+                </div>    
+                    <button class="enviar" type="submit">Enviar</button>
             </form>
             <input class="expand" type="checkbox">
         </div>
@@ -45,7 +47,7 @@
     <section id="teste">
         
         <form action="" id="alterar">
-            <input type="text" name="nome" placeholder="Nome">
+            <input type="text" name="nome" placeholder="Nome" style="display: none;">
             <input type="text" name="new" placeholder="novo nome">
             <input type="text" name="desc" placeholder="descrição">
             <input type="text" name="categoria" placeholder="categoria">

@@ -26,7 +26,7 @@ const sapatos = {
             desc: "elegantes inspirados no Nike Daybreak",
             categoria: "Tênis esportivo",
             preco: 489.90,
-            img: "assets/img/nike-removebg-preview.png  ",
+            img: "assets/img/nike-removebg-preview.png",
         },
     ],
     remover(sapato) {
@@ -101,6 +101,7 @@ alterar.addEventListener("submit", function (event) {
     sapatos.alterar(nome, novo, desc, categoria, preco, imagem)
     console.log(sapatos.listaSapatos)
 })
+
 init = () => {
     var container = document.getElementById('product')
     container.innerHTML = ""
@@ -108,9 +109,9 @@ init = () => {
         container.innerHTML += `
         <div class="mostrarP product"> 
             <img onclick="maisInfo(this)" src="`+ val.img + `"/>
-            <p><b>`+ val.nome + `</b></p>
-            <p class="mostrarPreco"><b>R$`+ val.preco + `</b></p>
-            <button class="excluir" onclick="deletar(this)" >Excluir</button>
+            <p>`+ val.nome + `</p>
+            <p class="mostrarPreco">R$`+ val.preco + `</p>
+            <button class="excluir" onclick="deletar(this)">Excluir</button>
             <button class="editar" onclick="editar(this)">Editar</button>    
         </div>     
         `
@@ -122,6 +123,7 @@ init()
 function deletar(item) {
     sapato = item.previousElementSibling.previousElementSibling.innerHTML
     sapatos.remover(sapato)
+    console.log(sapato)
 }
 
 function maisInfo(sapato){
@@ -130,5 +132,14 @@ function maisInfo(sapato){
     console.log(info)
 }
 
+function editar(item) {
+    sapato = item.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML
+    info = sapatos.info(sapato)
+    console.log(info[0])
+    alterar[0].value = info[0]
+    for (i = 1; i < alterar.length; i++) {
+        alterar[i].value = info[i-1]
+    }
+}
 
 
