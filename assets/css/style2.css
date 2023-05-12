@@ -12,14 +12,13 @@
     font-family: 'Gotu', sans-serif;
     transition: 0.5s;
 }
-
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    height: 13vh;
     padding-right: 15px;
-    height: fit-content;
     background-color: var(--cor-preta);
 }
 
@@ -32,7 +31,7 @@ main{
     background-image: url(../img/Design\ sem\ nome\ \(1\)\ 1.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 700px;
+    height: calc(100vh - 13vh);
 }
 
 main h1{
@@ -69,6 +68,7 @@ main btn a{
     padding-bottom: 7px;
     letter-spacing: 4px;
     font-size: 19px;
+    font-family: 'Quicksand', sans-serif;
     padding-right: 15px;
     text-transform: uppercase;
   }
@@ -113,3 +113,25 @@ main btn a{
   .divb{
     padding-top: 15px;
   }
+
+  /*--------------------------------------BARRA DO SCROLL------------------------------------- */
+
+  ::-webkit-scrollbar {
+    width: 12px;               
+  }
+  
+*::-webkit-scrollbar-track {
+    background: black;        
+  }
+  
+/* *::-webkit-scrollbar-thumb {
+    background-color: white;    
+    border-radius: 20px;       
+    border: 1.5px solid var(--cor-texto2);  
+    width: 1px;
+} */
+/*---------------------------------------------------------------------------*/
+
+.divb a{
+    text-decoration: none;
+}
