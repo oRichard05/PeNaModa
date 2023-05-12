@@ -76,6 +76,7 @@ header picture img {
 
 .mostrarP p {
     font-size: 20px;
+    font-weight: 700;
 }
 
 .mostrarPreco {
@@ -135,6 +136,12 @@ header picture img {
     height: 0px;    
     overflow: hidden;
     text-align: left !important;
+}
+
+#form-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .expand{

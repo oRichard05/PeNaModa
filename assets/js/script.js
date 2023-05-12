@@ -108,9 +108,9 @@ init = () => {
         container.innerHTML += `
         <div class="mostrarP product"> 
             <img onclick="maisInfo(this)" src="`+ val.img + `"/>
-            <p><b>`+ val.nome + `</b></p>
-            <p class="mostrarPreco"><b>R$`+ val.preco + `</b></p>
-            <button class="excluir" onclick="deletar(this)" >Excluir</button>
+            <p>`+ val.nome + `</p>
+            <p class="mostrarPreco">R$`+ val.preco + `</p>
+            <button class="excluir" onclick="deletar(this)">Excluir</button>
             <button class="editar" onclick="editar(this)">Editar</button>    
         </div>     
         `
