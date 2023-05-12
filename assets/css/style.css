@@ -43,8 +43,8 @@ header picture img {
 }
 
 #product img {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
 }
 
 .product img {
@@ -68,4 +68,117 @@ header picture img {
     width: 70%;
     cursor: pointer;
     margin-bottom: 10px;
+}
+
+.produtos{
+    display: block;
+
+}
+
+.cria{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    flex-direction: column;
+}
+
+#criar{
+    margin: 8px;
+    height: 0px;    
+    overflow: hidden;
+    text-align: left !important;
+}
+
+.expand{
+    appearance: none;
+    border: 1px solid #CDB181;
+    padding: 8px;
+    text-align: center;
+    margin: 12px;
+    
+}
+
+.expand:hover{
+    
+}
+
+.expand::before{
+    content: "Adcionar produto";
+}
+
+.expand:checked::before{
+    content: "Fechar";
+}
+
+#criar:has(+ .expand:checked){
+    height: auto;
+}
+
+.produtos{
+    display: block;
+
+}
+
+.cria{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    flex-direction: column-reverse;
+}
+
+#criar{
+    margin: 8px;
+    height: 0px;    
+    text-align: left !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 80%;
+}
+
+#criar input{
+    border: none;
+    border-bottom: #CDB181 solid 2px;
+    border-radius: 8px;
+    padding: 8px;
+    width: fit-content;
+
+}
+
+.expand{
+    appearance: none;
+    border: 2px solid var(--cor-preta);
+    padding: 8px;
+    text-align: center;
+    margin: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: var(--cor-branca);
+}
+
+
+.expand::before{
+    content: "Adcionar produto";
+}
+
+.expand:checked::before{
+    content: "Fechar";
+}
+
+#criar:has(+ .expand:checked){
+    height: auto;
+}
+.enviar{
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    outline: none;
+    padding: 10px;
+    color: black;
+    font-weight: 700;
+    background: white ;
+    background-size: 600% 600%;
+    margin: 12px;
+
 }

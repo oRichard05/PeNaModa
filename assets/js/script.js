@@ -58,6 +58,20 @@ const sapatos = {
             }
         }
         init()
+    },
+    info(sapato){
+        let tudo = []
+        for (let i = 0; i < sapatos.listaSapatos.length; i++) {
+            if (sapatos.listaSapatos[i].nome == sapato) {
+                let nome = sapatos.listaSapatos[i].nome;
+                let desc = sapatos.listaSapatos[i].desc
+                let categoria = sapatos.listaSapatos[i].categoria
+                let preco = sapatos.listaSapatos[i].preco
+                let img = sapatos.listaSapatos[i].img
+                tudo = [nome,desc,categoria,preco,img]
+            }
+        }
+        return tudo
     }
 }
 
@@ -87,16 +101,15 @@ alterar.addEventListener("submit", function (event) {
     sapatos.alterar(nome, novo, desc, categoria, preco, imagem)
     console.log(sapatos.listaSapatos)
 })
-
 init = () => {
     var container = document.getElementById('product')
     container.innerHTML = ""
     sapatos.listaSapatos.map((val) => {
         container.innerHTML += `
         <div class="mostrarP product"> 
-            <img onclick="maisInfo(this)" src="`+ val.img + `"/>
-            <p>`+ val.nome + `</p>
-            <p> R$`+ val.preco + `</p>
+            <img class="img" onclick="maisInfo(this)" src="`+ val.img + `"/>
+            <p class="pnome">`+ val.nome + `</p>
+            <p class ="preço"> R$`+ val.preco + `</p>
             <button class="excluir" onclick="deletar(this)" >Excluir</button>
         </div>    
         `
@@ -110,11 +123,11 @@ function deletar(item) {
     sapatos.remover(sapato)
 }
 
-function maisInfo(item) {
-    console.log("teste")
+function maisInfo(sapato){
+    nome = (sapato.nextElementSibling.innerHTML)
+    info = sapatos.info(nome)
+    console.log(info)
 }
 
-modal = () =>{
-    var paimodal = document.getElementById('main')
-    paimodal.innerHTML = ""
-}
+
+
