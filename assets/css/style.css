@@ -231,5 +231,6 @@ header picture img {
     background: white ;
     background-size: 600% 600%;
     margin: 12px;
+    cursor: pointer;
 
 }
