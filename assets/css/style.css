@@ -50,10 +50,9 @@ header picture img {
 
 #product {
     padding-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
-    place-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     text-align: center;
     gap: 60px;
     padding-bottom: 40px;
@@ -127,6 +126,7 @@ header picture img {
 .form-div {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
