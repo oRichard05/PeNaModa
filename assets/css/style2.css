@@ -38,7 +38,7 @@ main{
 main h1{
     color: var(--cor-texto2);
     text-align: center;
-    /* margin-top: 204px; */
+    font-family: 'Quicksand', sans-serif;
 }
 
 main btn a{
