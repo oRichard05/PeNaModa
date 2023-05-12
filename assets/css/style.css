@@ -9,6 +9,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Gotu', sans-serif;
+    transition: 0.5s;
 }
 
 header {
@@ -26,12 +27,13 @@ header picture img {
     margin-left: 30px;
 }
 
-#product {
+#product {padding-top: 70px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     place-items: center;
     text-align: center;
+    gap: 60px;
 }
 
 #product img {
@@ -43,6 +45,13 @@ header picture img {
     width: 20vh;
 }
 
+.mostrarP {
+    border: 1px solid #CDB181;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border-radius: 10px;
+}
+
 .excluir {
     display: none;
     border: none;
@@ -50,8 +59,10 @@ header picture img {
     border-radius: 10px;
     background-color: rgb(167, 27, 27);
     color: white;
-    padding: 10px;
+    padding: 5px;
+    width: 70%;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 .product:hover{
     .excluir{
