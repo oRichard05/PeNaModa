@@ -23,7 +23,7 @@ const sapatos = {
         },
         {
             nome: "Nike Waffle Debut",
-            desc: "elegantes inspirados no Nike Daybreak",
+            desc: "Inspirado no Nike Daybreak",
             categoria: "Tênis esportivo",
             preco: 489.90,
             img: "assets/img/nike-removebg-preview.png",
@@ -111,6 +111,7 @@ init = () => {
             <img onclick="maisInfo(this)" src="`+ val.img + `"/>
             <p>`+ val.nome + `</p>
             <p class="mostrarPreco">R$`+ val.preco + `</p>
+            <details>`+ val.desc     + `</details>
             <button class="excluir" onclick="deletar(this)">Excluir</button>
             <button class="editar" onclick="editar(this)">Editar</button>    
         </div>     
