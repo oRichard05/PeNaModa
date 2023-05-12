@@ -113,7 +113,7 @@ init = () => {
             <p class="mostrarPreco">R$`+ val.preco + `</p>
             <details>`+ val.desc     + `</details>
             <button class="excluir" onclick="deletar(this)">Excluir</button>
-            <button class="editar" onclick="editar(this)">Editar</button>    
+            <a href="#alterar"><button class="editar" onclick="editar(this)">Editar</button></a>    
         </div>     
         `
     })
