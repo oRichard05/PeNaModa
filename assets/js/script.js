@@ -107,11 +107,12 @@ init = () => {
     sapatos.listaSapatos.map((val) => {
         container.innerHTML += `
         <div class="mostrarP product"> 
-            <img class="img" onclick="maisInfo(this)" src="`+ val.img + `"/>
-            <p class="pnome">`+ val.nome + `</p>
-            <p class ="preço"> R$`+ val.preco + `</p>
+            <img onclick="maisInfo(this)" src="`+ val.img + `"/>
+            <p><b>`+ val.nome + `</b></p>
+            <p class="mostrarPreco"><b>R$`+ val.preco + `</b></p>
             <button class="excluir" onclick="deletar(this)" >Excluir</button>
-        </div>    
+            <button class="editar" onclick="editar(this)">Editar</button>    
+        </div>     
         `
     })
 }

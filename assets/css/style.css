@@ -3,6 +3,7 @@
     --cor-branca: white;
     --cor-execluir: #E31B1B;
     --cor-ouro: #CDB181;
+    --cor-editar: #2877C1;
 }
 
 * {
@@ -10,12 +11,27 @@
     padding: 0;
     font-family: 'Gotu', sans-serif;
     transition: 0.5s;
+    font-family: 'Quicksand', sans-serif;
 }
 
 body {
     background-image: url("../img/fundo3.svg");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.ti {
+    text-align: center;
+}
+
+.dis {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+}
+
+.dis a img {
+    width: 40px;
 }
 
 header {
@@ -30,12 +46,11 @@ header {
 
 header picture img {
     height: 90px;
-    margin-left: 30px;
 }
 
 #product {padding-top: 70px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     justify-items: center;
     place-items: center;
     text-align: center;
@@ -43,8 +58,8 @@ header picture img {
 }
 
 #product img {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
 }
 
 .product img {
@@ -59,20 +74,53 @@ header picture img {
     border-radius: 10px;
 }
 
+.mostrarP p {
+    font-size: 20px;
+}
+
+.mostrarPreco {
+    color: var(--cor-ouro);
+}
+
 .excluir {
+    transition: 0.3s;
+    border: none;
     outline: none;
     border-radius: 10px;
     background-color: #E31B1B;
     color: white;
-    padding: 3px;
-    width: 70%;
+    padding: 8px 3px;
+    width: 25%;
     cursor: pointer;
-    margin-bottom: 10px;
+    margin: 10px 0px;
 }
 
+.editar {
+    transition: 0.3s;
+    background-color: var(--cor-editar);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 8px 3px;
+    width: 25%;
+    cursor: pointer;
+    margin: 10px 0px;
+    color: white;
+    margin-left: 10px;
+}
+
+.excluir:hover {
+    width: 30%;
+}
+.editar:hover {
+    width: 30%;
+}
+
+
+
+/* ajimação do add ---------------------------------------------------------- */
 .produtos{
     display: block;
-
 }
 
 .cria{
@@ -95,10 +143,6 @@ header picture img {
     padding: 8px;
     text-align: center;
     margin: 12px;
-    
-}
-
-.expand:hover{
     
 }
 
