@@ -31,7 +31,7 @@
     <section class="produtos">
         <div class="cria">
             <form action="" id="criar">
-                <div id="form-div">
+                <div class="form-div">
                     <input type="text" name="nome" placeholder="Nome">
                     <input type="text" name="desc" placeholder="descrição">
                     <input type="text" name="categoria" placeholder="categoria">
@@ -40,20 +40,21 @@
                 </div>    
                     <button class="enviar" type="submit">Enviar</button>
             </form>
-            <input class="expand" type="checkbox">
+            <input class="expand" type="checkbox">  
         </div>
         <div id="product"></div>
     </section>
     <section id="teste">
-        
         <form action="" id="alterar">
-            <input type="text" name="nome" placeholder="Nome" style="display: none;">
-            <input type="text" name="new" placeholder="novo nome">
-            <input type="text" name="desc" placeholder="descrição">
-            <input type="text" name="categoria" placeholder="categoria">
-            <input type="text" name="preco" placeholder="preço">
-            <input type="text" name="imagem" placeholder="imagem">
-            <button type="submit">Enviar</button>
+            <div class="form-div">
+                <input type="text" name="nome" placeholder="Nome" style="display: none;">
+                <input type="text" name="new" placeholder="novo nome">
+                <input type="text" name="desc" placeholder="descrição">
+                <input type="text" name="categoria" placeholder="categoria">
+                <input type="text" name="preco" placeholder="preço">
+                <input type="text" name="imagem" placeholder="imagem">
+            </div>
+            <button type="submit" class="enviar">Enviar</button>
         </form>
     </section>
     <script src="assets/js/script.js"></script>
