@@ -107,7 +107,6 @@ header picture img {
     padding: 8px 3px;
     width: 25%;
     cursor: pointer;
-    margin: 10px 0px;
     color: white;
     margin-left: 10px;
 }
@@ -127,12 +126,10 @@ header picture img {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
 }
 
-.form-div input {
-    margin-left: 30px;
-}
 
 .produtos{
     display: block;
