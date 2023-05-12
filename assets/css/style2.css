@@ -1,0 +1,36 @@
+:root {
+    --cor-preta: black;
+    --cor-branca: white;
+    --cor-execluir: #E31B1B;
+    --cor-ouro: #CDB181;
+    --main: ;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gotu', sans-serif;
+    transition: 0.5s;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 15px;
+    height: fit-content;
+    background-color: var(--cor-preta);
+}
+
+header picture img {
+    height: 73px;
+    margin-left: 30px;
+}
+
+main{
+    background-image: url(../img/Design\ sem\ nome\ \(1\)\ 1.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+}
