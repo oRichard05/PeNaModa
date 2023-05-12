@@ -97,7 +97,7 @@ init = () => {
             <img onclick="maisInfo(this)" src="`+ val.img + `"/>
             <p>`+ val.nome + `</p>
             <p> R$`+ val.preco + `</p>
-            <button class="excluir" onclick="deletar(this)" >excluir</button>
+            <button class="excluir" onclick="deletar(this)" >Excluir</button>
         </div>    
         `
     })
@@ -112,4 +112,9 @@ function deletar(item) {
 
 function maisInfo(item) {
     console.log("teste")
+}
+
+modal = () =>{
+    var paimodal = document.getElementById('main')
+    paimodal.innerHTML = ""
 }
