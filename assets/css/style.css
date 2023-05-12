@@ -15,7 +15,7 @@
 }
 
 body {
-    background-image: url("../img/fundo3.svg");
+    background-image: url();
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -57,8 +57,8 @@ header picture img {
     text-align: center;
     gap: 60px;
     padding-bottom: 40px;
+    width: 100%;
 }
-
 #product img {
     width: 220px;
     height: 220px;
