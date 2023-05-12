@@ -13,7 +13,6 @@
     transition: 0.5s;
     font-family: 'Quicksand', sans-serif;
 }
-
 html {
     --s: 100px; /* control the size */
     --t: 1px;  /* control the thickness */
@@ -33,13 +32,9 @@ html {
       var(--s) calc(var(--s)/-8)/var(--_s),
       conic-gradient(from 90deg at var(--t) var(--t),var(--c2) 25%,var(--c1) 0) 
       calc((var(--s) - var(--t))/2) calc((var(--s) - var(--t))/2)/var(--s) calc(5*var(--s)/4);
+      scroll-behavior: smooth;
   }
-
-  html {
-    scroll-behavior: smooth;
- }
   
-
 body {
     /* background-image: url("../img/fundo7.png"); */
     background-repeat:repeat;
@@ -157,7 +152,6 @@ header picture img {
     gap: 20px;
     justify-content: center;
 }
-
 
 .produtos{
     display: block;
