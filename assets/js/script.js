@@ -23,7 +23,7 @@ const sapatos = {
         },
         {
             nome: "Nike Waffle Debut",
-            desc: "elegantes inspirados no Nike Daybreak",
+            desc: "Inspirado no Nike Daybreak",
             categoria: "Tênis esportivo",
             preco: 489.90,
             img: "assets/img/nike-removebg-preview.png",
@@ -108,9 +108,10 @@ init = () => {
     sapatos.listaSapatos.map((val) => {
         container.innerHTML += `
         <div class="mostrarP product"> 
-            <img onclick="maisInfo(this)" src="`+ val.img + `"/>
+            <img src="`+ val.img + `"/>
             <p>`+ val.nome + `</p>
             <p class="mostrarPreco">R$`+ val.preco + `</p>
+            <details>`+ val.desc     + `</details>
             <button class="excluir" onclick="deletar(this)">Excluir</button>
             <button class="editar" onclick="editar(this)">Editar</button>    
         </div>     
@@ -121,19 +122,13 @@ init = () => {
 init()
 
 function deletar(item) {
-    sapato = item.previousElementSibling.previousElementSibling.innerHTML
+    sapato = item.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML
     sapatos.remover(sapato)
     console.log(sapato)
 }
 
-function maisInfo(sapato){
-    nome = (sapato.nextElementSibling.innerHTML)
-    info = sapatos.info(nome)
-    console.log(info)
-}
-
 function editar(item) {
-    sapato = item.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML
+    sapato = item.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML
     info = sapatos.info(sapato)
     console.log(info[0])
     alterar[0].value = info[0]

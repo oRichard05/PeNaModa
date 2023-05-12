@@ -48,7 +48,9 @@ header picture img {
     height: 90px;
 }
 
-#product {padding-top: 70px;
+#product {
+    margin-top: 40px;
+    padding-top: 70px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
@@ -72,6 +74,7 @@ header picture img {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     border-radius: 10px;
+    height: 360px;
 }
 
 .mostrarP p {
@@ -120,49 +123,15 @@ header picture img {
 
 
 /* ajimação do add ---------------------------------------------------------- */
-.produtos{
-    display: block;
-}
 
-.cria{
-    display: flex;
-    align-items: center;
-    justify-self: center;
-    flex-direction: column;
-}
-
-#criar{
-    margin: 8px;
-    height: 0px;    
-    overflow: hidden;
-    text-align: left !important;
-}
-
-#form-div {
+.form-div {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.expand{
-    appearance: none;
-    border: 1px solid #CDB181;
-    padding: 8px;
-    text-align: center;
-    margin: 12px;
-    
-}
-
-.expand::before{
-    content: "Adcionar produto";
-}
-
-.expand:checked::before{
-    content: "Fechar";
-}
-
-#criar:has(+ .expand:checked){
-    height: auto;
+.form-div input {
+    margin-left: 30px;
 }
 
 .produtos{
@@ -178,14 +147,14 @@ header picture img {
 }
 
 #criar{
-    margin: 8px;
-    height: 0px;    
+    margin: 8px; 
     text-align: left !important;
-    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8px;
     width: 80%;
+    width: 100%;
+    display: none;
 }
 
 #criar input{
@@ -218,7 +187,7 @@ header picture img {
 }
 
 #criar:has(+ .expand:checked){
-    height: auto;
+    display: flex;
 }
 .enviar{
     border: none;
@@ -232,5 +201,23 @@ header picture img {
     background-size: 600% 600%;
     margin: 12px;
     cursor: pointer;
+}
 
+/* -------------------form de alterar----------------- */
+
+#alterar{
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    flex-direction: column;
+}
+
+#alterar input {
+    border: none;
+    border-bottom: #CDB181 solid 2px;
+    border-radius: 8px;
+    padding: 8px;
+    width: fit-content;
 }
