@@ -23,29 +23,32 @@
         </a>
     </header>
     <main id="main">
-        <section class="produtos">
-            <div id="product"></div>
-        </section>
-        <section id="teste">
+    <section class="produtos">
+        <div id="product"></div>
+        <div class="cria">
             <form action="" id="criar">
                 <input type="text" name="nome" placeholder="Nome">
                 <input type="text" name="desc" placeholder="descrição">
                 <input type="text" name="categoria" placeholder="categoria">
                 <input type="text" name="preco" placeholder="preço">
                 <input type="text" name="imagem" placeholder="imagem">
-                <button type="submit">Enviar</button>
+                <button class="enviar" type="submit">Enviar</button>
             </form>
-            <form action="" id="alterar">
-                <input type="text" name="nome" placeholder="Nome">
-                <input type="text" name="new" placeholder="novo nome">
-                <input type="text" name="desc" placeholder="descrição">
-                <input type="text" name="categoria" placeholder="categoria">
-                <input type="text" name="preco" placeholder="preço">
-                <input type="text" name="imagem" placeholder="imagem">
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-    </main>
+            <input class="expand" type="checkbox">
+        </div>
+    </section>
+    <section id="teste">
+        
+        <form action="" id="alterar">
+            <input type="text" name="nome" placeholder="Nome">
+            <input type="text" name="new" placeholder="novo nome">
+            <input type="text" name="desc" placeholder="descrição">
+            <input type="text" name="categoria" placeholder="categoria">
+            <input type="text" name="preco" placeholder="preço">
+            <input type="text" name="imagem" placeholder="imagem">
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
     <script src="assets/js/script.js"></script>
     <script src="https://kit.fontawesome.com/7f62cd2861.js" crossorigin="anonymous"></script>
 </body>

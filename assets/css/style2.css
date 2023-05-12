@@ -3,7 +3,7 @@
     --cor-branca: white;
     --cor-execluir: #E31B1B;
     --cor-ouro: #CDB181;
-    --main: ;
+    --cor-texto2: #F1CF62;
 }
 
 * {
@@ -33,4 +33,26 @@ main{
     background-repeat: no-repeat;
     background-size: cover;
     height: 700px;
+}
+
+main h1{
+    color: var(--cor-texto2);
+    text-align: center;
+    /* margin-top: 204px; */
+}
+
+main btn a{
+    align-items: center;
+}
+#divpai{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#divpai .divb{
+    display: flex;
+    justify-content: end;
+    width: 28vw;
 }
