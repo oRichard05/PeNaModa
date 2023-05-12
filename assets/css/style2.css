@@ -23,6 +23,11 @@ header {
 }
 
 header picture img {
-    height: 90px;
+    height: 73px;
     margin-left: 30px;
 }
+
+main picture img{
+    height: 90px;
+}
+
