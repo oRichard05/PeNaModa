@@ -13,11 +13,32 @@
     transition: 0.5s;
     font-family: 'Quicksand', sans-serif;
 }
-/* ! Remover se não for utilizar BG */
+html {
+    --s: 100px; /* control the size */
+    --t: 1px;  /* control the thickness */
+    --c1:  var(--cor-ouro);
+    --c2: var(--cor-branca);
+  
+    --_c: #0000 calc(98% - var(--t)),var(--c1) calc(100% - var(--t)) 98%,#0000;
+    --_s: calc(2*var(--s)) calc(5*var(--s)/2);
+    --_r0: /var(--_s) radial-gradient(calc(var(--s)/2) at 0    20%,var(--_c));
+    --_r1: /var(--_s) radial-gradient(calc(var(--s)/2) at 100% 20%,var(--_c));
+    background:
+      0 0 var(--_r0),calc(-1*var(--s)) calc(5*var(--s)/4) var(--_r0),
+      var(--s) 0 var(--_r1),0 calc(5*var(--s)/4) var(--_r1),
+      conic-gradient(at var(--t) calc(20% + 2*var(--t)),#0000 75%,var(--c1) 0)
+      calc(var(--t)/-2) calc(var(--s) - var(--t))/var(--s) calc(5*var(--s)/4),
+      repeating-conic-gradient(var(--c2) 0 25%,#0000 0 50%)
+      var(--s) calc(var(--s)/-8)/var(--_s),
+      conic-gradient(from 90deg at var(--t) var(--t),var(--c2) 25%,var(--c1) 0) 
+      calc((var(--s) - var(--t))/2) calc((var(--s) - var(--t))/2)/var(--s) calc(5*var(--s)/4);
+  }
 body {
-    background-image: url();
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background-image: url("../img/fundo7.png"); */
+    background-repeat:repeat;
+    background-position: absolute;
+    width: 100%;
+     
 }
 
 .ti {
@@ -207,7 +228,7 @@ header picture img {
     background-color: var(--cor-preta);
     margin-top: 40px;
     text-align: center;
-    color: var(--cor-ouro);
+    color: var(--cor-branca);
 }
 
 #editor {
@@ -225,11 +246,28 @@ header picture img {
     flex-direction: column;
 }
 
-#alterar input {
-    /* background-color: transparent; */
+/* #alterar input {
     border: none;
     border-bottom: #CDB181 solid 2px;
     border-radius: 3px;
     padding: 8px;
     width: fit-content;
-}
+} */
+
+#alterar input {
+    color: var(--cor-branca);
+    background: transparent;
+    font-weight: 500;
+    font-size: 14px;
+    height: 40px;
+    border-radius: 0px;
+    padding-left: 10px;
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+    outline: none;
+    }
+    #alterar input:focus {
+    border-bottom: 4.5px solid var(--cor-ouro);
+    -webkit-transition: 0.1s;
+    transition: 0.5s;
+    }
