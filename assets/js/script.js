@@ -136,5 +136,3 @@ function editar(item) {
         alterar[i].value = info[i-1]
     }
 }
-
-
